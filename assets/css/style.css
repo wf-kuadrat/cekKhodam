@@ -1,0 +1,691 @@
+/* navbar  */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Protest+Guerrilla&display=swap');
+
+:root {
+      --bg: rgb(177, 6, 6);
+      --hover: rgb(95, 73, 73);
+}
+
+.navbar-brand span {
+      color: var(--bg);
+}
+
+.head-nav {
+      background-color: var(--bg) !important;
+      color: white !important;
+      /* backdrop-filter: blur(6px) !important; */
+      /* background-color: rgba(255, 255, 255, 0.3) !important; */
+}
+
+.head-nav .navbar-brand,
+.offcanvas-header h5 {
+      font-family: "Kaushan Script", cursive;
+}
+
+.offcanvas-header h5 span {
+      color: var(--bg);
+}
+.offcanvas-body{
+      height: 100% !important;
+}
+
+
+
+.nav-link {
+      position: relative;
+}
+
+.nav-link::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: red;
+      position: absolute;
+      transition: 0.3s ease;
+      display: block;
+      bottom: -2px;
+      left: 0;
+}
+
+.nav-link:hover::after {
+      width: 100%;
+}
+
+.nav-item .active::after {
+      width: 100%;
+      height: 2px;
+      background: red;
+      position: absolute;
+      display: block;
+      bottom: -2px;
+      left: 0;
+}
+
+
+
+/* Remove border from toggler */
+.navbar-toggler {
+      border: 0 !important;
+}
+
+
+@media (max-width: 576px){
+      
+      .offcanvas-body{
+            z-index: 1050 !important;
+            background: transparent !important;
+      }
+      /* .nav-item, .ikon{
+            background-color: black;
+      } */
+      .offcanvas-edit{
+            backdrop-filter: blur(10px);
+      }
+      .offcanvas-title {
+            color: #fff;
+      }
+}
+
+/* akhir navbar  */
+
+/* jumbotron */
+.banner {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/jumbotron/jumbotron.jpg");
+      background-size: cover;
+      background-position: center;
+}
+
+.group-banner {
+      font-family: "Kaushan Script", system-ui;
+      font-size: 1.3rem;
+}
+
+.group-banner h1 {
+      font-family: "Kaushan Script", system-ui !important;
+}
+
+.parent-content {
+      font-family: "Caveat", system-ui;
+}
+
+.btn-beli {
+      background-color: var(--bg);
+      color: white;
+      border: none;
+      padding: 13px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-40%, -10%);
+      transition: 0.3s ease;
+}
+
+.btn-beli:hover {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+      transition: 0.3s ease;
+      padding: 9px;
+      border-radius: 5px;
+      background-color: rgb(95, 73, 73);
+}
+
+@media (max-width: 576px) {
+      .group-banner {
+            font-size: 0.8rem;
+      }
+
+      .btn-beli {
+            padding: 10px;
+      }
+}
+
+/* akhir jumbotron */
+
+/* story */
+.card-story {
+      box-shadow: 0 4px 8px black;
+      width: 100%;
+      padding: 2rem;
+}
+
+.my-story span {
+      font-family: "Kaushan Script", cursive;
+      color: var(--bg);
+      position: absolute;
+      top: 4.6rem;
+      right: 12rem;
+}
+
+.card-body h1 {
+      font-family: "Protest Guerrilla", system-ui;
+}
+
+.card-body p {
+      font-family: "Ubuntu", sans-serif;
+}
+
+.btn-story {
+      background-color: var(--bg);
+      color: #fff;
+      transition: 0.3s ease;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      padding: 10px;
+      box-shadow: 4px 4px 4px black;
+}
+
+.btn-story:hover {
+      background-color: var(--hover);
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      transition: 0.3s ease;
+}
+
+.btn-story:active {
+      box-shadow: none;
+}
+
+/*akhir  story */
+
+/* responsifnya */
+/* Responsive for Tablets and Phones */
+@media (max-width: 768px) {
+      .banner {
+            height: 90vh;
+            /* Mengurangi tinggi banner untuk tablet dan HP */
+      }
+
+      .card-story {
+            max-width: 90%;
+            margin: 0 auto;
+      }
+
+      .my-story span {
+            right: 2rem;
+            font-size: 1.5rem;
+            /* Sesuaikan ukuran font */
+      }
+}
+
+@media (max-width: 576px) {
+      .card-story {
+            max-width: 100%;
+            margin: 0 auto;
+
+      }
+
+      .my-story {
+            position: relative;
+      }
+
+      .my-story span {
+            font-size: 1rem;
+            /* Lebih kecil untuk HP */
+            right: 6rem;
+            top: -1rem;
+            position: absolute;
+      }
+
+      .btn-beli {
+            width: 100%;
+            transform: translate(-50%, -10%);
+      }
+}
+
+/* akhir responsif */
+
+/* rasa yang berbeda */
+.banner-dua {
+      height: 70vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/jumbotron/kayu.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-top: 5rem;
+      width: 100%;
+
+}
+
+.group-banner-dua {
+      font-family: "Kaushan Script", cursive;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.parent-content-dua {
+      font-family: "Caveat", system-ui;
+}
+
+.btn-beli-dua {
+      background-color: var(--bg);
+      color: white;
+      border: none;
+      padding: 13px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      transition: 0.3s ease;
+}
+
+.btn-beli-dua:hover {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+      transition: 0.3s ease;
+      padding: 9px;
+      border-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: rgb(95, 73, 73);
+}
+
+.my-teste span {
+      font-family: "Kaushan Script", cursive;
+      color: var(--bg);
+      position: relative;
+      top: -20px;
+
+}
+
+@media (max-width: 576px) {
+      .img-teste {
+            height: 300px;
+            width: 300px;
+      }
+
+      .banner-dua {
+            display: flex;
+            align-items: center;
+            height: 130vh;
+
+      }
+
+      .group-banner-dua {
+            font-size: 0.8rem;
+            display: block;
+      }
+
+      .btn-beli-dua {
+            padding: 10px;
+      }
+}
+
+@media (max-widt: 768px) {
+      .img-teste {
+            height: 300px;
+            width: 300px;
+      }
+
+      .group-banner-dua {
+            font-size: 0.8rem;
+            display: block;
+      }
+
+      .banner-dua {
+            display: flex;
+            align-items: center;
+            height: 130vh;
+
+      }
+}
+
+/* akhir rasa yang berbeda */
+
+/* produk */
+
+.produk h1,
+.produk h3,
+.produk p {
+      text-align: center;
+}
+
+.produk h1 {
+      font-family: "Protest Guerrilla", system-ui;
+}
+
+.produk h3 span {
+      color: var(--bg);
+      font-family: "Caveat", system-ui;
+      position: relative;
+      top: -20px;
+}
+
+.produk p {
+      font-family: "Ubuntu", system-ui;
+      opacity: 0.7;
+}
+
+.card-produk {
+      border-top-right-radius: 50px !important;
+      border-bottom-left-radius: 50px !important;
+      box-shadow: 4px 4px 4px black !important;
+      margin-top: 3rem !important;
+}
+
+.card-body h5 {
+      font-family: "Kaushan Script", system-ui;
+      font-weight: 700;
+}
+
+.card-body .p-card {
+      font-family: "Caveat", system-ui;
+      font-weight: 500;
+      font-size: 1.2rem;
+}
+
+.pembelian {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--bg);
+      margin-top: 20px;
+}
+
+.pembelian p {
+      margin-top: 20px;
+      color: var(--bg);
+      font-size: 1.5rem;
+}
+
+.beli-produk {
+      font-size: 1.5rem;
+      background-color: var(--bg) !important;
+      color: #fff !important;
+      padding: 0 20px !important;
+      border-top-right-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      transition: 0.3s ease !important;
+}
+
+.beli-produk:hover {
+      background: var(--hover) !important;
+      transition: 0.3s ease !important;
+      padding: 5px !important;
+      border-bottom-left-radius: 30px;
+}
+
+.judul-produk-kebab h4 {
+      background-color: var(--bg);
+      color: #fff;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: inline !important;
+      font-family: "Protest Guerrilla", system-ui;
+}
+
+.judul-produk-kebab {
+      border-bottom: 2px solid var(--bg);
+      width: 100%;
+      position: relative;
+      margin-top: 5rem !important;
+
+}
+
+.modal-header h1 {
+      font-family: "Protest Guerrilla", system-ui !important;
+}
+
+#tampilkan-lebih-banyak,
+#tampilkan-lebih-sedikit {
+      border: none;
+      color: var(--bg);
+      transition: 0.3s ease;
+      margin-top: 4rem;
+}
+
+#tampilkan-lebih-banyak:hover,
+#tampilkan-lebih-sedikit:hover {
+      text-shadow: 4px 4px 4px var(--bg);
+      transform: translateY(-10px);
+      transition: 0.3s ease;
+}
+
+/* akhir produk */
+
+/* lokasi */
+.lokasi {
+      width: 100%;
+      margin-top: 3rem;
+}
+
+.lokasi h1 {
+      font-family: "Protest Guerrilla", system-ui;
+      margin-top: 4rem;
+      color: #fff;
+}
+
+
+.background {
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.background iframe {
+      padding: 20px;
+}
+
+.btn-52,
+.btn-52 *,
+.btn-52 :after,
+.btn-52 :before,
+.btn-52:after,
+.btn-52:before {
+      border: 0 solid;
+      box-sizing: border-box;
+}
+
+.btn-52 {
+      -webkit-tap-highlight-color:
+            transparent;
+      -webkit-appearance: button;
+      background-color:
+            #000;
+      background-image: none;
+      color:
+            #fff;
+      cursor: pointer;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+            Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+            Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      font-size: 100%;
+      line-height: 1.5;
+      margin: 0;
+      -webkit--mask-image: -webkit-radial-gradient(#000, #fff);
+      padding: 0;
+}
+
+.btn-52:disabled {
+      cursor: default;
+}
+
+.btn-52:-moz-focusring {
+      outline: auto;
+}
+
+.btn-52 svg {
+      display: block;
+      -vertical-align: middle;
+}
+
+.btn-52 [hidden] {
+      display: none;
+}
+
+.btn-52 {
+      border: 1px solid;
+      border-radius: 999px;
+      box-sizing: border-box;
+      display: block;
+      font-weight: 900;
+      overflow: hidden;
+      padding: 1.2rem 3rem;
+      position: relative;
+      text-transform: uppercase;
+}
+
+.btn-52 .original {
+      background:
+            #fff;
+      color:
+            #000;
+      display: grid;
+      inset: 0;
+      place-content: center;
+      position: absolute;
+      transition: transform 0.2s;
+}
+
+.btn-52:hover .original {
+      transform: translateY(100%);
+}
+
+.btn-52 .letters {
+      display: inline-flex;
+}
+
+.btn-52 span {
+      opacity: 0;
+      transform: translateY(-15px);
+      transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-52:hover span {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+.btn-52:hover span:nth-child(2) {
+      transition-delay: 0.1s;
+}
+
+.btn-52:hover span:nth-child(3) {
+      transition-delay: 0.2s;
+}
+
+.btn-52:hover span:nth-child(4) {
+      transition-delay: 0.3s;
+}
+
+.btn-52:hover span:nth-child(5) {
+      transition-delay: 0.4s;
+}
+
+.btn-52:hover span:nth-child(6) {
+      transition-delay: 0.5s;
+}
+
+.parent-btn {
+      padding: 20px;
+}
+
+@media (max-width: 576px) {
+      .parent-background iframe {
+            width: 250px;
+      }
+}
+
+/* akhir lokasi */
+
+/* footer */
+.sub-footer {
+      background: linear-gradient(20deg, rgb(211, 51, 51), rgb(59, 53, 53));
+      color: #fff;
+      padding: 40px;
+      display: flex;
+      justify-content: space-around !important;
+}
+
+.parent-list ul li {
+      list-style: none;
+      margin: 20px 0;
+}
+
+.parent-list ul li a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #fff;
+      padding: 20px;
+      font-family: "Kaushan Script", system-ui;
+      transition: 0.3s ease;
+}
+
+.parent-list ul li a:hover {
+      background-color: brown;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+}
+
+.parent-list ul li:hover {
+      transform: translateX(-20px);
+      transition: 0.3s ease;
+}
+
+.text-center img {
+      border-radius: 50%;
+}
+
+.copyright {
+      background: linear-gradient(20deg, rgb(59, 53, 53), rgb(211, 51, 51));
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+}
+
+.copyright small a {
+      text-decoration: none;
+      color: #fff;
+      text-shadow: 4px 4px 4px black;
+}
+
+.copyright small {
+      font-size: 1rem;
+      margin-bottom: 30px;
+}
+
+.content-footer h3 {
+      font-family: "Protest Guerrilla", system-ui;
+}
+
+.content-footer {
+      margin: 2rem 0;
+      transition: 0.3s ease;
+}
+
+.content-footer .button-promo {
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 13px;
+      background-color: var(--bg);
+      transition: 0.3s ease;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: #fff;
+}
+
+.content-footer .button-promo:hover {
+      background: transparent;
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 15px #fff;
+}
+
+.sosmed span a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s ease;
+      margin: 0 10px;
+      font-size: 1.2rem;
+}
+
+.sosmed span a i:hover {
+      transform: translate(-10px) !important;
+      transition: 0.3s ease;
+}
+
+/* akhir footer */
